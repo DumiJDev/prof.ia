@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: prof.ia
+  docker:
+    compose:
+      enabled: true
+      file: compose.yml
+  threads:
+    virtual:
+      enabled: true
+  ai:
+    ollama:
+      base-url: http://localhost:9090
+      chat:
+        model: llama2-uncensored
+  data:
+    mongodb:
+      username: root
+      password: password
+
+vaadin:
+  url-mapping: /profia/*
+  bun:
+    enable: true
