@@ -12,11 +12,13 @@ spring:
     ollama:
       base-url: http://localhost:9090
       chat:
-        model: llama2-uncensored
+        model: llama3:instruct
   data:
     mongodb:
       username: root
       password: password
+      authentication-database: admin
+      database: profia
 
 vaadin:
   url-mapping: /profia/*
