@@ -1,4 +1,4 @@
-package io.github.dumijdev.profia.adapters.out.ia;
+package io.github.dumijdev.profia.adapters.output.ia;
 
 import io.github.dumijdev.profia.application.core.domain.Message;
 import io.github.dumijdev.profia.application.ports.out.SendMessageOutputPort;
@@ -9,7 +9,6 @@ import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.stereotype.Component;
 
-import java.util.LinkedList;
 import java.util.List;
 
 @Component

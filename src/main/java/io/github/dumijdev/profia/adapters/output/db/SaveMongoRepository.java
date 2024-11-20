@@ -1,6 +1,6 @@
-package io.github.dumijdev.profia.adapters.out.db;
+package io.github.dumijdev.profia.adapters.output.db;
 
-import io.github.dumijdev.profia.adapters.out.db.models.MessageModel;
+import io.github.dumijdev.profia.adapters.output.db.models.MessageModel;
 import io.github.dumijdev.profia.application.core.domain.Message;
 import io.github.dumijdev.profia.application.ports.out.SaveMessageOuputPort;
 import lombok.RequiredArgsConstructor;

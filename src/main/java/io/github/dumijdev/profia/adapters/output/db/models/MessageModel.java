@@ -1,4 +1,4 @@
-package io.github.dumijdev.profia.adapters.out.db.models;
+package io.github.dumijdev.profia.adapters.output.db.models;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;

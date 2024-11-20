@@ -1,4 +1,4 @@
-package io.github.dumijdev.profia.adapters.out.db;
+package io.github.dumijdev.profia.adapters.output.db;
 
 import io.github.dumijdev.profia.application.core.domain.Message;
 import io.github.dumijdev.profia.application.core.domain.Page;

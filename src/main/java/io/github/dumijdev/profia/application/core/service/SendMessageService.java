@@ -2,7 +2,6 @@ package io.github.dumijdev.profia.application.core.service;
 
 import io.github.dumijdev.profia.application.core.domain.Message;
 import io.github.dumijdev.profia.application.ports.in.SendMessageInputPort;
-import io.github.dumijdev.profia.application.ports.out.SaveMessageOuputPort;
 import io.github.dumijdev.profia.application.ports.out.SendMessageOutputPort;
 
 import java.util.Objects;
