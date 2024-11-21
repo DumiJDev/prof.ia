@@ -7,11 +7,6 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: password
     ports:
       - "27017:27017"
-  ollama:
-    image: ollama/ollama
-    container_name: ollama
-    ports:
-      - "9090:11434"
   mongo-express:
     image: mongo-express
     container_name: mongo-express

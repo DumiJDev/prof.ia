@@ -7,6 +7,9 @@ import com.vaadin.flow.component.sidenav.SideNavItem;
 
 import java.util.List;
 
+import static com.vaadin.flow.component.icon.VaadinIcon.ARCHIVE;
+import static com.vaadin.flow.component.icon.VaadinIcon.HOME;
+
 public class SideBarComponent extends SideNav {
 
     public SideBarComponent() {
@@ -15,8 +18,8 @@ public class SideBarComponent extends SideNav {
 
     private List<SideNavItem> getLinks() {
         return List.of(
-                navItem("Home", "/", VaadinIcon.HOME.create()),
-                navItem("Apps", "/apps", VaadinIcon.LIST.create())
+                navItem("Home", "/", HOME.create()),
+                navItem("History", "/history", ARCHIVE.create())
         );
     }
 

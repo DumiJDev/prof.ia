@@ -13,7 +13,7 @@ public class SaveMessageService implements SaveMessageInputPort {
 
     @Override
     public Message save(Message message) {
-        saveMessageOuputPort.saveMessage(message);
+        saveMessageOuputPort.saveMessage(message.chatId(), message);
 
         return message;
     }

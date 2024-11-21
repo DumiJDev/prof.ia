@@ -1,9 +1,10 @@
 package io.github.dumijdev.profia.ui.components;
 
+import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.Input;
-import com.vaadin.flow.component.icon.VaadinIcon;
+import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.dom.Style;
 
 import java.util.function.Consumer;
@@ -14,13 +15,13 @@ import static com.vaadin.flow.component.icon.VaadinIcon.MICROPHONE;
 public class InputChat extends Div {
     private final Button sendMessageButton;
     private final Button recordMessageButton;
-    private final Input input;
+    private final TextField input;
 
     public InputChat() {
         var inputContainer = new Div();
         setInputContainerStyle(inputContainer.getStyle());
 
-        input = new Input();
+        input = new TextField();
         setInputStyle(input.getStyle());
 
         sendMessageButton = new Button(ARROW_RIGHT.create());
@@ -43,6 +44,17 @@ public class InputChat extends Div {
 
     public void addSendAction(Consumer<String> sendAction) {
         sendMessageButton.addClickListener(event -> {
+            if (input.getValue().isEmpty()) {
+                return;
+            }
+            sendAction.accept(input.getValue());
+            input.setValue("");
+        });
+
+        input.addKeyDownListener(Key.ENTER, e -> {
+            if (input.getValue().isEmpty()) {
+                return;
+            }
             sendAction.accept(input.getValue());
             input.setValue("");
         });
